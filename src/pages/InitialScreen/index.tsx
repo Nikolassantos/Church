@@ -4,6 +4,7 @@ import { RectButton, BorderlessButton } from 'react-native-gesture-handler';
 import styles from './styles'
 
 import BackgroundIMG from '../../assets/images/BackgroundIMG.png'
+import Button from '../../Components/Button';
 
 const InitialScreen: React.FC = () => {
   return (
@@ -18,11 +19,7 @@ const InitialScreen: React.FC = () => {
           </Text>
         </View>
         <View style={styles.Footer} >
-          <RectButton style={styles.Button} >
-            <Text style={styles.TextButton} >
-            Entrar na Plataforma
-            </Text>
-          </RectButton>
+          <Button Title="Acessar a Plataforma " />
          <View style={styles.BackgroundFooterButtons} >
           <Text style={styles.TextFooter} >Ja tem uma conta ? </Text>
             <BorderlessButton>

@@ -16,6 +16,8 @@ import {
   } from '@expo-google-fonts/archivo'
 
 import  Routes from './src/routes'
+import Dashboard from './src/pages/Dashboard';
+import SignUp from './src/pages/SignUp'
 
 export default function App() {
   let [fonstLoaded] = useFonts({
@@ -30,7 +32,7 @@ export default function App() {
   } else {
     return (
       <>
-        <Routes/>
+        <SignUp/>
         <StatusBar />
       </>
     );
