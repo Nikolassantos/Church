@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import InitialScreen from './pages/InitialScreen';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
 
 const Stack = createStackNavigator();
 
@@ -12,9 +13,10 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator headerMode="none" >
+       <Stack.Screen name="Home" component={InitialScreen} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
-        <Stack.Screen name="Cadstro" component={SignUp} />
-        <Stack.Screen name="Home" component={InitialScreen} />
+        <Stack.Screen name="Cadastro" component={SignUp} />
+        <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
   );

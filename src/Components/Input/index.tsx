@@ -1,19 +1,19 @@
 import React from 'react';
-import { View, TextInput } from 'react-native';
+import { TextInput, TextInputAndroidProps } from 'react-native';
 
 import styles from './styles'
 
-interface InputProps {
+interface InputProps extends TextInputAndroidProps {
   placeholder: string
-  InputType?: string
 }
 
-const Input: React.FC<InputProps> = ({placeholder, InputType}) => {
+const Input: React.FC<InputProps> = ({placeholder, ...rest }) => {
   return (
     <TextInput 
-    style={styles.Input} 
-    placeholderTextColor="#99879D" 
-    placeholder={placeholder} 
+      {...rest}
+      style={styles.Input} 
+      placeholderTextColor="#99879D" 
+      placeholder={placeholder} 
     />
   )
 }

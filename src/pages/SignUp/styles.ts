@@ -10,18 +10,20 @@ const styles = StyleSheet.create({
   SafeArea:{
     width:'100%',
     height:'100%',
+    flex:1,
     flexDirection:'column',
     justifyContent:'center',
     alignItems:'center'
   },
   TitleForm:{
     fontSize:24,
-    fontFamily:'Poppins_600SemiBold'
+    fontFamily:'Poppins_600SemiBold',
+    marginBottom:10
   },
   Form:{
     backgroundColor:'#FFFF',
     width:'90%',
-    height:'50%',
+    height:'65%',
     flexDirection:'column',
     justifyContent:'center',
     alignItems:'center',

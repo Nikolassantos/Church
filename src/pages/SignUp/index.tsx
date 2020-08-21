@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, ImageBackground, Text, SafeAreaView  } from 'react-native';
+import { View, ImageBackground, Text, SafeAreaView, TouchableOpacity ,Image } from 'react-native';
 import styles from './styles'
 import BackgroundIMG from '../../assets/images/BackgroundIMG.png'
 import Input from '../../Components/Input';
 import Button from '../../Components/Button';
+import PerfilIMG from '../../assets/images/user.png'
 import { BorderlessButton } from 'react-native-gesture-handler';
 
 const SignUp: React.FC = () => {
@@ -14,8 +15,11 @@ const SignUp: React.FC = () => {
     >
       <SafeAreaView style={styles.SafeArea}  >
         <View style={styles.Form} >
-          <Text style={styles.TitleForm} >Cadastro</Text>
 
+          <Text style={styles.TitleForm} >Cadastro</Text>
+            <TouchableOpacity>
+              <Image  source={PerfilIMG} style={{ width:100, height:100 }} />
+            </TouchableOpacity>
           <Input placeholder="  Primeiro Nome" />
           <Input placeholder="  Segundo Nome" />
           <Input placeholder="  Email" />

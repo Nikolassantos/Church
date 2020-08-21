@@ -11,7 +11,7 @@ const Dashboard: React.FC = () => {
       style={styles.container} 
     >
       <View>
-        
+      
       </View>
     </ImageBackground>
   )

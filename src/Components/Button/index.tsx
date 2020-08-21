@@ -1,16 +1,16 @@
 import React from 'react';
 import { Text } from 'react-native';
-import { RectButton } from 'react-native-gesture-handler';
+import { RectButton, RectButtonProperties } from 'react-native-gesture-handler';
 
 import styles from './styles'
 
-interface ButtonProps {
+interface ButtonProps extends RectButtonProperties {
   Title: string
 }
 
-const Button: React.FC<ButtonProps> = ({ Title }) => {
+const Button: React.FC<ButtonProps> = ({ Title, ...rest  }) => {
   return (
-    <RectButton style={styles.Button} >
+    <RectButton {...rest} style={styles.Button} >
       <Text style={styles.TextButton} >
         {Title}
       </Text>

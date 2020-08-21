@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     height:'100%',
     flexDirection:'column',
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
   },
   TitleForm:{
     fontSize:24,
