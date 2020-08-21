@@ -12,7 +12,8 @@ const styles = StyleSheet.create({
   },
   TextButton:{
     fontFamily:'Poppins_400Regular',
-    color:'#FFFF'
+    color:'#FFFF',
+    fontWeight:'bold',
   },
 })
 

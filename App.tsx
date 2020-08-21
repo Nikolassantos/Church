@@ -1,6 +1,6 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import 'react-native-gesture-handler';
 import { AppLoading } from 'expo';
 import 
 { 
@@ -16,7 +16,6 @@ import {
   } from '@expo-google-fonts/archivo'
 
 import  Routes from './src/routes'
-
 
 export default function App() {
   let [fonstLoaded] = useFonts({

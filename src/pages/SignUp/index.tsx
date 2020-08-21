@@ -1,11 +1,19 @@
 import React from 'react';
-import { View, ImageBackground, Text, SafeAreaView, TouchableOpacity ,Image } from 'react-native';
+import { View,
+  ImageBackground, 
+  Text, 
+  TouchableOpacity ,
+  Image ,
+  KeyboardAvoidingView,
+  Platform,
+} from 'react-native';
 import styles from './styles'
 import BackgroundIMG from '../../assets/images/BackgroundIMG.png'
 import Input from '../../Components/Input';
 import Button from '../../Components/Button';
 import PerfilIMG from '../../assets/images/user.png'
 import { BorderlessButton } from 'react-native-gesture-handler';
+import Header from '../../Components/Header';
 
 const SignUp: React.FC = () => {
   return (
@@ -13,7 +21,15 @@ const SignUp: React.FC = () => {
       source={BackgroundIMG}
       style={styles.container} 
     >
-      <SafeAreaView style={styles.SafeArea}  >
+      <Header 
+        Icon="arrow-left"
+        size={30}
+        marginTopIcon={15}
+      />
+      <KeyboardAvoidingView 
+        style={styles.SafeArea} 
+        // behavior={ Platform.OS === 'ios' ? 'padding': null }
+      >
         <View style={styles.Form} >
 
           <Text style={styles.TitleForm} >Cadastro</Text>
@@ -34,7 +50,7 @@ const SignUp: React.FC = () => {
             <Text style={styles.ButtonFooter} >Log-in</Text>
           </BorderlessButton>
         </View>
-        </SafeAreaView>
+        </KeyboardAvoidingView>
       
     </ImageBackground>
   )
