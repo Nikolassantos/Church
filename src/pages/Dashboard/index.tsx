@@ -3,7 +3,9 @@ import { View, ImageBackground, Image, Text } from 'react-native';
 import BackgroundIMG from '../../assets/images/BackgroundIMG.png'
 import PerfilIMG from '../../assets/images/user.png'
 import Header from '../../Components/Header'
+import { RectButton } from 'react-native-gesture-handler'
 import styles from './styles'
+import { Feather } from '@expo/vector-icons';
 import Input from '../../Components/Input';
 import Button from '../../Components/Button';
 
@@ -28,10 +30,19 @@ const Dashboard: React.FC = () => {
           <Input 
             width="100%"
             height={200}
-            placeholder="message"
+            multiline={true}
           />
         </View>
-        <Button Title="Enviar" />
+        <View style={styles.ButtonsView} >
+          <RectButton  style={styles.ButtonX} >
+          <Feather name="x" size={20} color="#FFF" />
+          </RectButton>
+        <Button 
+          Title="Enviar" 
+          width={250}
+          height={65}
+          />
+        </View>
       </View>
     </ImageBackground>
   )

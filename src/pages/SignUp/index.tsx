@@ -2,20 +2,24 @@ import React from 'react';
 import { View,
   ImageBackground, 
   Text, 
-  TouchableOpacity ,
+  TouchableOpacity,
   Image ,
   KeyboardAvoidingView,
-  Platform,
 } from 'react-native';
 import styles from './styles'
 import BackgroundIMG from '../../assets/images/BackgroundIMG.png'
 import Input from '../../Components/Input';
 import Button from '../../Components/Button';
 import PerfilIMG from '../../assets/images/user.png'
-import { BorderlessButton } from 'react-native-gesture-handler';
 import Header from '../../Components/Header';
+import { useNavigation } from '@react-navigation/native';
 
 const SignUp: React.FC = () => {
+  const { navigate } = useNavigation();
+
+  function GotoLogin() {
+    navigate('Login')
+  }
   return (
       <ImageBackground 
       source={BackgroundIMG}
@@ -37,12 +41,12 @@ const SignUp: React.FC = () => {
               <Image  source={PerfilIMG} style={{ width:100, height:100 }} />
             </TouchableOpacity>
           <Input 
-            placeholder="Primeiro Nome" 
+            placeholder="Nome" 
             height={60}
             width="90%"
           />
           <Input 
-            placeholder="Segundo Nome" 
+            placeholder="username" 
             height={60}
             width="90%"
           />
@@ -58,13 +62,17 @@ const SignUp: React.FC = () => {
           />
         </View>
         <View style={styles.BackgroundButton} > 
-          <Button Title="Cadastrar" />
+          <Button 
+            Title="Cadastrar" 
+            width={300}
+            height={65}
+          />
         </View>
         <View style={styles.Footer} >
         <Text style={styles.TextFooter} >Ja tem uma conta ? </Text>
-          <BorderlessButton>
+          <TouchableOpacity onPress={GotoLogin} >
             <Text style={styles.ButtonFooter} >Log-in</Text>
-          </BorderlessButton>
+          </TouchableOpacity>
         </View>
         </KeyboardAvoidingView>
       

@@ -13,7 +13,7 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator headerMode="none" >
-       <Stack.Screen name="Home" component={InitialScreen} />
+        <Stack.Screen name="Home" component={InitialScreen} />
         <Stack.Screen name="Dashboard" component={Dashboard} />
         <Stack.Screen name="Cadastro" component={SignUp} />
         <Stack.Screen name="Login" component={Login} />

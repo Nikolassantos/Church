@@ -53,7 +53,12 @@ const Login: React.FC = () => {
           />
         </View>
         <View style={styles.BackgroundButton} > 
-          <Button Title="Login" onPress={GoDashboard} />
+          <Button 
+            Title="Login"
+            onPress={GoDashboard} 
+            width={300}
+            height={65}
+           />
         </View>
         <View style={styles.Footer} >
         <Text style={styles.TextFooter} >não tem uma conta ? </Text>

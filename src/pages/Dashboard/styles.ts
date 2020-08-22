@@ -42,6 +42,18 @@ const styles = StyleSheet.create({
   Frase:{
     fontSize:18, 
     fontFamily:'Poppins_600SemiBold'
+  },
+  ButtonsView:{
+    flexDirection:'row',
+    width:'85%',
+    justifyContent:'space-between'
+  },
+  ButtonX:{
+    backgroundColor:'#CABDFD',
+    width:'20%',
+    borderRadius:12,
+    justifyContent:'center',
+    alignItems:'center'
   }
 })
 

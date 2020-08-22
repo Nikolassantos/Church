@@ -16,10 +16,13 @@ const styles = StyleSheet.create({
   },
   Content:{
     width:'100%',
-    height:'60%',
+    height:'100%',
     flexDirection:'column',
     justifyContent:'space-between',
-    alignItems:'center'
+    alignItems:'center',
+  },
+  TextView:{
+    marginTop:100
   },
   Button:{
     backgroundColor:'#9378FF',
@@ -28,7 +31,7 @@ const styles = StyleSheet.create({
     borderRadius:30,
     flexDirection:'row',
     justifyContent:'center',
-    alignItems:'center'
+    alignItems:'center',
   },
   TextButton:{
     fontFamily:'Poppins_400Regular',
@@ -42,7 +45,9 @@ const styles = StyleSheet.create({
   },
   Footer:{
     flexDirection:'column',
-    alignItems:'center'
+    alignItems:'center',
+    justifyContent:'flex-end',
+    marginBottom:20
   },
   BackgroundFooterButtons:{
     marginTop:10,
