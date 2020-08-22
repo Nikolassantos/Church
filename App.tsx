@@ -15,7 +15,7 @@ import {
   Archivo_700Bold 
   } from '@expo-google-fonts/archivo'
 
-import  Routes from './src/routes'
+import Routes from './src/routes';
 
 export default function App() {
   let [fonstLoaded] = useFonts({

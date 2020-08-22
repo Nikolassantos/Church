@@ -33,13 +33,29 @@ const SignUp: React.FC = () => {
         <View style={styles.Form} >
 
           <Text style={styles.TitleForm} >Cadastro</Text>
-            <TouchableOpacity>
+            <TouchableOpacity>  
               <Image  source={PerfilIMG} style={{ width:100, height:100 }} />
             </TouchableOpacity>
-          <Input placeholder="  Primeiro Nome" />
-          <Input placeholder="  Segundo Nome" />
-          <Input placeholder="  Email" />
-          <Input placeholder="  Senha" />
+          <Input 
+            placeholder="Primeiro Nome" 
+            height={60}
+            width="90%"
+          />
+          <Input 
+            placeholder="Segundo Nome" 
+            height={60}
+            width="90%"
+          />
+          <Input 
+            placeholder="Email"
+            height={60}
+            width="90%"
+          />
+          <Input 
+            placeholder="Senha" 
+            height={60}
+            width="90%"
+          />
         </View>
         <View style={styles.BackgroundButton} > 
           <Button Title="Cadastrar" />

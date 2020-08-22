@@ -1,5 +1,11 @@
 import React from 'react';
-import { View, ImageBackground, SafeAreaView,Text, TouchableOpacity } from 'react-native';
+import { 
+  View, 
+  ImageBackground, 
+  SafeAreaView,
+  Text, 
+  TouchableOpacity,
+} from 'react-native';
 import Header from '../../Components/Header'
 import Button from '../../Components/Button'
 import BackgroundIMG from '../../assets/images/BackgroundIMG.png'
@@ -15,8 +21,9 @@ const Login: React.FC = () => {
   function GoSignup() {
     navigate('Cadastro')
   }
-
-
+  function GoDashboard() {
+    navigate('Dashboard')
+  }
 
   return (
     <ImageBackground 
@@ -32,11 +39,21 @@ const Login: React.FC = () => {
         <View style={styles.Form} >
           <Text style={styles.TitleForm} >Login</Text>
 
-          <Input placeholder="  Login" autoCompleteType="username" />
-          <Input placeholder="  Senha" autoCompleteType="password" />
+          <Input 
+            placeholder="Login" 
+            autoCompleteType="username" 
+            height={60}
+            width="90%"
+          />
+          <Input 
+            placeholder="Senha" 
+            autoCompleteType="password" 
+            height={60}
+            width="90%"
+          />
         </View>
         <View style={styles.BackgroundButton} > 
-          <Button Title="Login" />
+          <Button Title="Login" onPress={GoDashboard} />
         </View>
         <View style={styles.Footer} >
         <Text style={styles.TextFooter} >não tem uma conta ? </Text>
