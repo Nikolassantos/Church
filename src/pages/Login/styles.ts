@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   Form:{
     backgroundColor:'#FFFF',
     width:'90%',
-    height:'35%',
+    height: 300,
     flexDirection:'column',
     justifyContent:'center',
     alignItems:'center',

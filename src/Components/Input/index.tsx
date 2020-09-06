@@ -1,13 +1,6 @@
 import React from 'react';
-import { TextInput, TextInputAndroidProperties } from 'react-native';
-
-
-interface InputProps extends TextInputAndroidProperties {
-  placeholder?: string,
-  height: number,
-  width: string,
-  multiline?: boolean,
-}
+import { TextInput,  } from 'react-native';
+import { InputProps } from './types'
 
 const Input: React.FC<InputProps> = ({placeholder, multiline, height,width, ...rest }) => {
   return (
