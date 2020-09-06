@@ -1,11 +1,22 @@
-import React from 'react';
-import { View } from 'react-native';
-import Post from '../../Components/Post';
+import React from 'react'
+import { Text, SafeAreaView } from 'react-native'
+import Post from '../../Components/Post'
 
-// import { Container } from './styles';
+import styles from './styles'
 
 const prayerScreen: React.FC = () => {
-  return <Post />;
+  return (
+    <SafeAreaView style={styles.Container}>
+      <Text style={styles.h1}>Pedidos de Orações</Text>
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+    </SafeAreaView>
+  )
 }
 
-export default prayerScreen;
+export default prayerScreen

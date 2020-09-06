@@ -1,22 +1,25 @@
 import { StyleSheet } from 'react-native'
 
-
 const styles = StyleSheet.create({
-  Container:{
-    backgroundColor: 'red',
-    flexDirection:'row',
-    marginTop:100,
-    width: 100,
-    height:100,
-    justifyContent:'space-between',
-    alignItems:'center'
+  Post: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '90%',
+    padding: 20
   },
-  IMG:{
-    width:60,
-    height:60
+  PostButton: {
+    flexDirection: 'row'
   },
-  LikeButton:{
-     
+  IMG: {
+    width: 60,
+    height: 60
+  },
+  Text: {
+    padding: 10
+  },
+  Icon: {
+    fontSize: 22
   }
 })
 export default styles
