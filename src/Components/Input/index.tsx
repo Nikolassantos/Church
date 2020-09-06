@@ -2,7 +2,7 @@ import React from 'react';
 import { TextInput,  } from 'react-native';
 import { InputProps } from './types'
 
-const Input: React.FC<InputProps> = ({placeholder, multiline, height,width, ...rest }) => {
+const Input: React.FC<InputProps> = ({placeholder, multiline, onChange, height,width, ...rest }) => {
   return (
     <TextInput 
       {...rest}
@@ -19,6 +19,7 @@ const Input: React.FC<InputProps> = ({placeholder, multiline, height,width, ...r
       placeholderTextColor="#99879D" 
       placeholder={placeholder} 
       multiline={multiline}
+      onChange={onChange}
     />
   )
 }
