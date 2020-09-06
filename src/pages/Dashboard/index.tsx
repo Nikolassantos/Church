@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, ImageBackground, Image, Text } from 'react-native';
 import BackgroundIMG from '../../assets/images/BackgroundIMG.png'
 import PerfilIMG from '../../assets/images/user.png'
@@ -8,9 +8,17 @@ import styles from './styles'
 import { Feather } from '@expo/vector-icons';
 import Input from '../../Components/Input';
 import Button from '../../Components/Button';
+import { useNavigation } from '@react-navigation/native';
 
 const Dashboard: React.FC = () => {
+  const { navigate } = useNavigation()
+
+  function handleprayerScreen() {
+    navigate('prayerScreen')
+  }
+
   return (
+    <>
     <ImageBackground 
       source={BackgroundIMG}
       style={styles.container} 
@@ -28,9 +36,10 @@ const Dashboard: React.FC = () => {
         <View style={styles.TextArea} >
           <Text style={styles.Frase} >Faça seu Pedido de Oração</Text>
           <Input 
-            width="100%"
-            height={200}
-            multiline={true}
+               multiline={true}
+               placeholder="Pedido de oração"
+               numberOfLines={5}
+              //  onChange={(event: VoidFunction) setInputValue(event.target.value)}
           />
         </View>
         <View style={styles.ButtonsView} >
@@ -41,10 +50,12 @@ const Dashboard: React.FC = () => {
           Title="Enviar" 
           width={250}
           height={65}
+          onPress={handleprayerScreen}
           />
         </View>
       </View>
     </ImageBackground>
+    </>
   )
 }
 

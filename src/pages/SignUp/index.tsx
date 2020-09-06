@@ -13,6 +13,7 @@ import Button from '../../Components/Button';
 import PerfilIMG from '../../assets/images/user.png'
 import Header from '../../Components/Header';
 import { useNavigation } from '@react-navigation/native';
+import ImgAlert from '../../utils/alert';
 
 const SignUp: React.FC = () => {
   const { navigate } = useNavigation();
@@ -21,6 +22,7 @@ const SignUp: React.FC = () => {
     navigate('Login')
   }
   return (
+    <>
       <ImageBackground 
       source={BackgroundIMG}
       style={styles.container} 
@@ -37,8 +39,8 @@ const SignUp: React.FC = () => {
         <View style={styles.Form} >
 
           <Text style={styles.TitleForm} >Cadastro</Text>
-            <TouchableOpacity>  
-              <Image  source={PerfilIMG} style={{ width:100, height:100 }} />
+            <TouchableOpacity onPress={ImgAlert} >  
+              <Image source={PerfilIMG} style={{ width:100, height:100 }} />
             </TouchableOpacity>
           <Input 
             placeholder="Nome" 
@@ -77,6 +79,7 @@ const SignUp: React.FC = () => {
         </KeyboardAvoidingView>
       
     </ImageBackground>
+    </>
   )
 }
 

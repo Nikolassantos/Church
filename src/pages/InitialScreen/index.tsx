@@ -35,7 +35,8 @@ const InitialScreen: React.FC = () => {
         </View>
         <View style={styles.Footer} >
           <Button  
-            onPress={NavigateLogin} Title="Acessar a Plataforma"
+            onPress={NavigateLogin} 
+            Title="Acessar a Plataforma"
             width={300}
             height={65}
           />
